@@ -1,0 +1,120 @@
+// Comentar em linha
+/* Comentario
+em bloco ...*/
+// CTRL + ; - Atalho
+
+//Declaracao de variaveis no JS
+// CONST X LET X VAR
+// por questao de seguranca evitar VAR
+// No escopo global CONST nao pode ser alterado
+
+const nome = "Bruno"; // Costante precisa de um valor
+let Nome; // permite iniciar a variavel vazia
+
+// const nome ="Bruno" - resulta em erro
+//let Nome ="Bruno" - resulta em erro
+var cor = "Azul";
+var cor = "Amarelo";
+let cidade = "Registro";
+cidade = "jacupiranga"; // let pode alterar o valor
+
+const message = "hello, word! Iniciamos estudos com javascript!";
+console.log(message);
+
+// typeof (esse comando exibira o tipo da variavel)
+const estado = "SP";
+const idade = 18;
+let endereco;
+console.log(typeof estado);
+console.log(typeof idade);
+console.log(typeof endereco);
+// o java script e uma lingugem de tipagem dinamica e tipagem fraca.
+/////////////////////////////////////////////////////////////////////////////////////
+// tipos de funçoes no javascript
+function minhaFuncao() {}
+console.log(typeof minhaFuncao);
+
+// funcao simples
+function saudacao() {
+  console.log("Ola, bem-vindo");
+}
+saudacao();
+
+// FUNCAO COM PARAMETRO/ ARGUMENTO
+// PARAMETRO -> É UM DADO QUE A FUNCAO RECEBE
+// ARGUMENTO -> É UM DADO QUE É ENVIADO PARA A FUNCAO.
+function Saudacao(nome) {
+  // PARAMETRO
+  console.log("Ola bem vindo " + nome); // CONCATENANDO
+  // USANDO TEMPLATE STRINGS
+  console.log("Ola bem-vindo ${nome}");
+  // $() -> placeholder
+}
+Saudacao("Bruno"); // ARGUMENTO
+
+// FUNCAO DE MAIS DE UM PAREMETRO
+function soma(n1, n2) {
+  let resultado = n1 + n2;
+  console.log("A soma dos dois numeros foi " + resultado);
+}
+let n1 = 6;
+let n2 = 10;
+soma(n1, n2);
+
+// funcao com retorno
+function Soma(n1, n2) {
+  return n1 + n2;
+}
+Soma(2, 6);
+console.log("A soma dos dois numero foi ${Soma(2, 6)}.");
+
+// funcao com mais de um retorno
+function parImpar(n) {
+  if (n % 2 == 0) {
+    return "par";
+  } else {
+    return "Impar";
+  }
+}
+let num = 4;
+console.log(parImpar(num));
+console.log("O numero ${num} é ${parImpar(num)}");
+
+// funcao anonima
+let dobro = function (x) {
+  return x * 2;
+};
+console.log(dobro(15));
+console.log("O dobro do numero é ${dobro(5)}");
+
+// arrow function com parametro unico
+// funcao flecha 
+const Dobro = x => {
+    return x*2
+}
+console.log("Funcao dobro com arrow function. Resulltado: ${Dobro(20).")
+
+// arrow function com mais de um parametro
+const calc = (num1, operador, num2) => {
+    return eval("${num1} ${operador} ${num2}")
+}
+console.log("O resultado da operaçao é ${calc(6, '*', 6)}.")
+
+// simplificando o arrow function
+const Calc = (num1, operador, num2) => eval("${num1} ${operador} ${num2}")
+    console.log("O resultado da operaçao é ${Calc(7, '*', 7)}.")
+
+    // IIFE immediaely invoked function expression
+    // funcao imediata - ultima \o/
+    const IIFE = (function(){
+        console.log("Estou sendo executada imediatamente......")
+    })()
+
+    // IIFE com parametro
+    const start = (function(app) {
+        console.log("Executando imediatamente o app ${app}.")
+    })("whatsapp")
+
+    // git add .
+    // git commit -m "@seu.username"
+    // git push
